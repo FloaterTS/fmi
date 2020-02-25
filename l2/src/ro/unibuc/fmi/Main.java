@@ -17,12 +17,5 @@ public class Main {
 
         int c = Integer.parseInt("234");
         System.out.println(c);
-
-        Integer j = 5;
-        int k = 6;
-    }
-
-    public static void swap(int j, int k) {
-
     }
 }
