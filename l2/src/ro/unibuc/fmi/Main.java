@@ -1,21 +1,54 @@
 package ro.unibuc.fmi;
 
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        int element = 0;
 
-        for (int i = 0; i < args.length; i++) {
-            System.out.println(args[i]);
+        int[] a = new int[2];
+        System.out.println(a.getClass());
+
+        a[0] = 1;
+        a[1] = 2;
+        swap(a);
+        System.out.println(a[0]);
+
+        int[][] b = new int[5][10];
+        System.out.println(b.getClass());
+
+        b[0] = new int[5];
+        b[1] = new int[6];
+        b[2] = a;
+
+        for (int i = 0; i < b.length; i++) {
+            for (int j = 0; j < b[i].length; j++) {
+                System.out.print(b[i][j]);
+            }
+            System.out.println("");
         }
 
-        Scanner sc = new Scanner(System.in);
-        String text = sc.nextLine();
-        System.out.println(text);
+        int c[] = {3, 4, 8, 1, 11};
+        display1D(c);
 
-        int c = Integer.parseInt("234");
-        System.out.println(c);
+        Arrays.sort(c);
+        System.out.println("");
+        display1D(c);
+
+        System.out.println();
+        System.out.println(Arrays.binarySearch(c, 1));
+    }
+
+    static void swap(int[] a) {
+        int c = a[0];
+        a[0] = a[1];
+        a[1] = c;
+    }
+
+    static void display1D(int[] a) {
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + " ");
+        }
     }
 }
