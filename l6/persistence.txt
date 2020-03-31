@@ -1,6 +1,2 @@
 calin,30
 gigel,20
-ionel,40
-ionel,40
-ionel,40
-ionel,40
